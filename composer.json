@@ -1,0 +1,16 @@
+{
+    "name": "tk-s/cronofy-php",
+    "description": "Cronofy-Api-Bindings for PHP",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^6.1@dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tobias Knipping",
+            "email": "knipping@tk-schulsoftware.de"
+        }
+    ],
+    "minimum-stability": "dev"
+}
