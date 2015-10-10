@@ -2,12 +2,81 @@
 
 namespace Cronofy\Model;
 
+use Cronofy\Collections\EventCollection;
+
 class Calendar
 {
     /**
      * @var string
      */
     protected $provider_name;
+
+    /**
+     * @var string
+     */
+    protected $profile_id;
+
+    /**
+     * @var string
+     */
+    protected $profile_name;
+
+    /**
+     * @var string
+     */
+    protected $calendar_id;
+
+    /**
+     * @var string
+     */
+    protected $calendar_name;
+
+    /**
+     * @var bool
+     */
+    protected $calendar_readonly;
+
+    /**
+     * @var bool
+     */
+    protected $calendar_deleted;
+
+    /**
+     * @var EventCollection
+     */
+    protected $events;
+
+    /**
+     * @return EventCollection
+     */
+    public function getEvents()
+    {
+        if (!$this->events instanceof EventCollection) {
+            $this->events = new EventCollection();
+        }
+
+        return $this->events;
+    }
+
+    /**
+     * @param Event $event
+     *
+     * @return Calendar
+     */
+    public function addEvent(Event $event)
+    {
+        $this->events->append($event);
+        return $this;
+    }
+
+    /**
+     * @param $eventId
+     * @return Event|false
+     */
+    public function getEvent($eventId)
+    {
+        return $this->events->offsetExists($eventId) ? $this->events->offsetGet($eventId) : false;
+    }
 
     /**
      * @return string
@@ -149,33 +218,4 @@ class Calendar
         return $this;
     }
 
-    /**
-     * @var string
-     */
-    protected $profile_id;
-
-    /**
-     * @var string
-     */
-    protected $profile_name;
-
-    /**
-     * @var string
-     */
-    protected $calendar_id;
-
-    /**
-     * @var string
-     */
-    protected $calendar_name;
-
-    /**
-     * @var bool
-     */
-    protected $calendar_readonly;
-
-    /**
-     * @var bool
-     */
-    protected $calendar_deleted;
 }
