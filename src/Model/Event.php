@@ -3,7 +3,7 @@
 namespace Cronofy\Model;
 
 /**
- * Class Event
+ * Class Event.
  */
 class Event
 {
@@ -44,8 +44,9 @@ class Event
 
     /**
      * Event constructor.
+     *
      * @param Calendar $calendar
-     * @param array $attribs
+     * @param array    $attribs
      */
     public function __construct(Calendar $calendar, array $attribs = [])
     {
@@ -68,11 +69,13 @@ class Event
 
     /**
      * @param string $event_id
+     *
      * @return Event
      */
     public function setEventId($event_id)
     {
         $this->event_id = $event_id;
+
         return $this;
     }
 
@@ -86,11 +89,13 @@ class Event
 
     /**
      * @param string $summary
+     *
      * @return Event
      */
     public function setSummary($summary)
     {
         $this->summary = $summary;
+
         return $this;
     }
 
@@ -104,11 +109,13 @@ class Event
 
     /**
      * @param string $description
+     *
      * @return Event
      */
     public function setDescription($description)
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -122,11 +129,13 @@ class Event
 
     /**
      * @param string $start
+     *
      * @return Event
      */
     public function setStart($start)
     {
         $this->start = $start;
+
         return $this;
     }
 
@@ -140,11 +149,13 @@ class Event
 
     /**
      * @param string $end
+     *
      * @return Event
      */
     public function setEnd($end)
     {
         $this->end = $end;
+
         return $this;
     }
 
@@ -158,14 +169,15 @@ class Event
 
     /**
      * @param array $location
+     *
      * @return Event
      */
     public function setLocation($location)
     {
         $this->location = $location;
+
         return $this;
     }
-
 
     /**
      * @return string
@@ -208,11 +220,10 @@ class Event
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isDeleted()
     {
         return $this->deleted;
     }
-
 }

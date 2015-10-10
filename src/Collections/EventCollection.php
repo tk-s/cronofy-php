@@ -1,13 +1,13 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: tobias
  * Date: 10.10.15
- * Time: 18:13
+ * Time: 18:13.
  */
 
 namespace Cronofy\Collections;
-
 
 use Cronofy\Model\Event;
 
@@ -20,6 +20,4 @@ class EventCollection extends \ArrayObject
     {
         parent::offsetSet($event->getEventId(), $event);
     }
-
-
 }
