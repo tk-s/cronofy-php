@@ -2,10 +2,8 @@
 
 namespace Cronofy\Model;
 
-
 class Calendar
 {
-
     /**
      * @var string
      */
@@ -21,11 +19,13 @@ class Calendar
 
     /**
      * @param string $provider_name
+     *
      * @return Calendar
      */
     public function setProviderName($provider_name)
     {
         $this->provider_name = $provider_name;
+
         return $this;
     }
 
@@ -39,11 +39,13 @@ class Calendar
 
     /**
      * @param string $profile_id
+     *
      * @return Calendar
      */
     public function setProfileId($profile_id)
     {
         $this->profile_id = $profile_id;
+
         return $this;
     }
 
@@ -57,11 +59,13 @@ class Calendar
 
     /**
      * @param string $profile_name
+     *
      * @return Calendar
      */
     public function setProfileName($profile_name)
     {
         $this->profile_name = $profile_name;
+
         return $this;
     }
 
@@ -75,11 +79,13 @@ class Calendar
 
     /**
      * @param string $calendar_id
+     *
      * @return Calendar
      */
     public function setCalendarId($calendar_id)
     {
         $this->calendar_id = $calendar_id;
+
         return $this;
     }
 
@@ -93,16 +99,18 @@ class Calendar
 
     /**
      * @param string $calendar_name
+     *
      * @return Calendar
      */
     public function setCalendarName($calendar_name)
     {
         $this->calendar_name = $calendar_name;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isCalendarReadonly()
     {
@@ -110,17 +118,19 @@ class Calendar
     }
 
     /**
-     * @param boolean $calendar_readonly
+     * @param bool $calendar_readonly
+     *
      * @return Calendar
      */
     public function setCalendarReadonly($calendar_readonly)
     {
         $this->calendar_readonly = $calendar_readonly;
+
         return $this;
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
     public function isCalendarDeleted()
     {
@@ -128,12 +138,14 @@ class Calendar
     }
 
     /**
-     * @param boolean $calendar_deleted
+     * @param bool $calendar_deleted
+     *
      * @return Calendar
      */
     public function setCalendarDeleted($calendar_deleted)
     {
         $this->calendar_deleted = $calendar_deleted;
+
         return $this;
     }
 
@@ -158,13 +170,12 @@ class Calendar
     protected $calendar_name;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $calendar_readonly;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $calendar_deleted;
 }
-
