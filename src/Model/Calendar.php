@@ -66,11 +66,13 @@ class Calendar
     public function addEvent(Event $event)
     {
         $this->events->append($event);
+
         return $this;
     }
 
     /**
      * @param $eventId
+     *
      * @return Event|false
      */
     public function getEvent($eventId)
@@ -217,5 +219,4 @@ class Calendar
 
         return $this;
     }
-
 }
